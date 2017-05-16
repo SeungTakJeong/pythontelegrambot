@@ -22,7 +22,7 @@ if __name__ == '__main__':
     scheduler = BlockingScheduler()
 
     # job을 등록
-    scheduler.add_job(scraping,'cron',hour ='07,11,15,17',timezone='Asia/Seoul')  # 60초마다 실행
+    scheduler.add_job(scraping,'cron',hour ='07,11,15,17',timezone='Asia/Seoul')  # 7,11,15,17시마다 실행
     try:
         scheduler.start()
     except(KeyboardInterrupt, SystemExit):
