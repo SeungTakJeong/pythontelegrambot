@@ -13,7 +13,7 @@ class SendMessage:
 
     def sendMessage(self,msg,token,chatid):
         telegramUrl = 'https://api.telegram.org/bot'+token+'/sendMessage'
-        params = {'chat_id':self.telegramChatId,'text':msg}
+        params = {'chat_id':chatid,'text':msg}
         result = requests.get(telegramUrl,params=params)
         resultCode = result.status_code
         resultJson = result.json()
