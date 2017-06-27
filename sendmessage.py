@@ -30,13 +30,11 @@ class SendMessage:
                 logging.error('API SERVER BAD RESPONSE')
             else:
                 resultJson = result.json()
-                print(resultJson)
                 resultInfo = resultJson['list'][0]
                 dataTime = resultInfo['dataTime']
                 pm10Value = resultInfo['pm10Value']
                 pm10Grade1h = resultInfo['pm10Grade1h']
                 pm10GradeKorean = '좋음'
-                print('pm10value : {0} , pm10Grade: {1}'.format(pm10Value,pm10Grade1h))
                 if pm10Grade1h =='1':
                     pm10GradeKorean = '좋음'
                 elif pm10Grade1h == '2':
@@ -62,7 +60,6 @@ class SendMessage:
             pm10Value = resultInfo['pm10Value']
             pm10Grade1h = resultInfo['pm10Grade1h']
             pm10GradeKorean = '좋음'
-            print('pm10value : {0} , pm10Grade: {1}'.format(pm10Value,pm10Grade1h))
             if pm10Grade1h =='1':
                 pm10GradeKorean = '좋음'
             elif pm10Grade1h == '2':
