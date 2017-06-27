@@ -57,7 +57,6 @@ class SendMessage:
             logging.error('API SERVER BAD RESPONSE')
         else:
             resultJson = result.json()
-            print(resultJson)
             resultInfo = resultJson['list'][0]
             dataTime = resultInfo['dataTime']
             pm10Value = resultInfo['pm10Value']

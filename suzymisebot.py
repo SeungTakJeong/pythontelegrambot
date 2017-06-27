@@ -13,11 +13,11 @@ def handle(msg):
         message = sendMessage.getPMInfoMessage(msg['text'])
         bot.sendMessage(chat_id, message)
 
-TOKEN = '304118278:AAH3uUnl_FC2tJj434zuYtBXfaGmMsuv1Rc'  # get token from command-line
+TOKEN = '304118278:AAH3uUnl_FC2tJj434zuYtBXfaGmMsuv1Rc'  
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print ('Listening ...')
 
-# Keep the program running.
+#시작
 while 1:
     time.sleep(10)

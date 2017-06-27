@@ -13,13 +13,13 @@ def handle(msg):
         message = sendMessage.getPMInfoMessage(msg['text'])
         bot.sendMessage(chat_id, message)
 
-TOKEN = '330472065:AAEfrxS78hh_fLsEWdiUQgfapjbwsRfU6sA'  # get token from command-line
+TOKEN = '330472065:AAEfrxS78hh_fLsEWdiUQgfapjbwsRfU6sA'  
 #CHATID = '62443661'
 #SEND='https://api.telegram.org/bot330472065:AAEfrxS78hh_fLsEWdiUQgfapjbwsRfU6sA/sendMessage?chat_id=62443661&text=Hello'
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
 print ('Listening ...')
 
-# Keep the program running.
+# 시작
 while 1:
     time.sleep(10)
